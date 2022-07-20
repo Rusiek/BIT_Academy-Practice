@@ -1,1 +1,3 @@
-print("hello world")
+arg = input() or "World"
+
+print("hello", arg)

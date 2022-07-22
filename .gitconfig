@@ -1,3 +1,8 @@
+#original file with git configurations is in $HOME
+[user]
+	email = marekzuwala@gmail.com
+	name = marek-02
+
 [alias]
   co = checkout
   ci = commit

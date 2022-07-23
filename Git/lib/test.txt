@@ -1,0 +1,2 @@
+New text
+#first comment - now correct

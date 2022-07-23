@@ -8,7 +8,7 @@ from function2 import is_prime_correct
 class TestMini:
     # Napisać testy sprawdzające funkcję is_prime dla liczb
     # z przedziału <-1, 6>
-    def test1(self):
+    def test0(self):
         x = -1 
         assert is_prime_correct(x) == is_prime(x)
     

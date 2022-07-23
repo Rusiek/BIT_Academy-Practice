@@ -1,4 +1,3 @@
-import py
 from function import square
 from random import randint
 import pytest

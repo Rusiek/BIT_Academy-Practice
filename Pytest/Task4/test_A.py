@@ -67,7 +67,7 @@ class TestMaxi:
 # oraz marker skipif, który po wykonaniu uniemożliwi wykonanie testów z czwartej klasy
 # ze względu na niepoprawne działanie funkcji w trzeciej klasie
 
-@pytest.mark.skipif(TestMaxi == pytest.fail)        #?
+@pytest.mark.skipif(TestMaxi == pytest.fail)   #?
 class TestHuge:
     
     def test1(self):

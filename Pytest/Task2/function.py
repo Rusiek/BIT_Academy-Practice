@@ -3,13 +3,19 @@ def is_prime(x):
         return False
     if  x == 2:
         return True
-    
-    i = 2
+    if x % 2 == 0:
+        return False
+
+
+    i = 3
     while i * i <= x:
         if x % i == 0:
             return False
-        i+=1
+        i+=2
     return True
+
+
+print(is_prime(13207))
 
 
 

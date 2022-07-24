@@ -15,9 +15,6 @@ def is_prime(x):
     return True
 
 
-print(is_prime(13207))
-
-
 
 
 

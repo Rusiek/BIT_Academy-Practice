@@ -1,0 +1,1 @@
+print("Tutaj nowa klasa")

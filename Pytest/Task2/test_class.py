@@ -36,7 +36,7 @@ class TestMid:
     def test_mid1(self):
         assert is_prime(10**4) == is_prime2(10**4)
     def test_mid2(self):
-        assert is_prime(10**5) == is_prime(10**5)
+        assert is_prime(10**5) == is_prime2(10**5)
     def test_mid3(self):
         num = randint(10**4, 10**5)
         assert is_prime(num) == is_prime2(num)
@@ -55,9 +55,9 @@ class TestMaxi:
     # naprawić funkcję is_prime aby testy wykonywały się szybciej
     # niż dla aktualnej funkcji
     def test_maxi1(self):
-        assert is_prime(10**12) == False
+        assert is_prime(10**12) == is_prime2(10**12)
     def test_maxi2(self):
-        assert is_prime(10**13) == False
+        assert is_prime(10**13) == is_prime2(10**13)
     def test_maxi3(self):
         num = randint(10**12, 10**13)
         assert is_prime(num) == is_prime2(num)

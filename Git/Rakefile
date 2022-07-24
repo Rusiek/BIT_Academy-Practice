@@ -1,0 +1,9 @@
+# Wrzuciłem jak kazali w tutorialu ale to jest tylko do Ruby
+
+#!/usr/bin/ruby -wKU
+
+task :default => :run
+
+task :run do
+  require './lib/hello'
+end

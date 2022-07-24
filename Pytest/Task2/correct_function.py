@@ -1,4 +1,4 @@
-def is_prime(x):
+def is_prime2(x):
     if x == 0 or x == 1:
         return False
     if x == 2:

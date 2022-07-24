@@ -1,4 +1,6 @@
 from function import is_prime
+from correct_function import is_prime2
+from random import randint
 
 class TestMini:
     # Napisać testy sprawdzające funkcję is_prime dla liczb
@@ -31,16 +33,19 @@ class TestMini:
 class TestMid:
     # Napisać 5 testów sprawdzających funkcję is_prime dla losowych
     # liczb z przedziału <10 ** 4, 10 ** 5>
-    def test_mid1(x):
-        assert is_prime(10**4) == False
-    def test_mid2(x):
-        assert is_prime(10**5) == False
-    def test_mid3(x):
-        assert is_prime(543835) == False
-    def test_mid4(x):
-        assert is_prime(13207) == False
-    def test_mid5(x):
-        assert is_prime(398256) == False
+    def test_mid1(self):
+        assert is_prime(10**4) == is_prime2(10**4)
+    def test_mid2(self):
+        assert is_prime(10**5) == is_prime(10**5)
+    def test_mid3(self):
+        num = randint(10**4, 10**5)
+        assert is_prime(num) == is_prime2(num)
+    def test_mid4(self):
+        num = randint(10**4, 10**5)
+        assert is_prime(num) == is_prime2(num)
+    def test_mid5(self):
+        num = randint(10**4, 10**5)
+        assert is_prime(num) == is_prime2(num)
 
 
 
@@ -49,13 +54,16 @@ class TestMaxi:
     # z przedziału <10 ** 12, 10 ** 13>, a następnie
     # naprawić funkcję is_prime aby testy wykonywały się szybciej
     # niż dla aktualnej funkcji
-    def test_maxi1(x):
+    def test_maxi1(self):
         assert is_prime(10**12) == False
-    def test_maxi2(x):
+    def test_maxi2(self):
         assert is_prime(10**13) == False
-    def test_maxi3(x):
-        assert is_prime(1933669654763) == False
-    def test_maxi4(x):
-        assert is_prime(9669300931979) == False
-    def test_maxi5(x):
-        assert is_prime(8977053234533) == False
+    def test_maxi3(self):
+        num = randint(10**12, 10**13)
+        assert is_prime(num) == is_prime2(num)
+    def test_maxi4(self):
+        num = randint(10**12, 10**13)
+        assert is_prime(num) == is_prime2(num)
+    def test_maxi5(self):
+        num = randint(10**12, 10**13)
+        assert is_prime(num) == is_prime2(num)

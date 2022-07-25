@@ -1,4 +1,4 @@
-# Pierwszy zawiera funkcję sortującą linked-list
+# Pierwszy zawiera funkcję sortującą linked-list 
 
 class Node:
     def __init__(self, val):
@@ -80,6 +80,5 @@ def merge_sort(head):
     left = merge_sort(head)
     right = merge_sort(after_center)
     sorted_list_head = merge(left, right)
-
     return sorted_list_head
 

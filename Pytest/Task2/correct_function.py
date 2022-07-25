@@ -10,5 +10,5 @@ def is_prime2(x):
     while i * i <= x:
         if x % i == 0:
             return False
-        i += 1
+        i += 2
     return True 

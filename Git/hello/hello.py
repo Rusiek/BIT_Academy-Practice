@@ -1,3 +1,2 @@
 print("Hello, World!")
-<<<<<<< HEAD
-#zmiana1,5
+#zmiana 1,5

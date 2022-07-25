@@ -1,2 +1,2 @@
 print("Hello, World!")
-zmiana1
+#zmiana1

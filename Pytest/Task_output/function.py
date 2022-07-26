@@ -6,5 +6,6 @@ def fib_OK(n):
         tab.append(tab[-1] + tab[-2])
     return tab[-1]
 
+
 def fib_Error(n):
     return fib_OK(n + 2)

@@ -1,8 +1,7 @@
-import pytest
 from function import fib_OK
 from math import log10
 
-@pytest.mark.slow
+
 class TestSmall:
     def test_A(self):
         assert fib_OK(0) == 0
@@ -12,10 +11,11 @@ class TestSmall:
     def test_B(self):
         assert fib_OK(10) == 55
         assert fib_OK(11) == 89
-    
+
     def test_C(self):
         assert fib_OK(20) == 6765
         assert fib_OK(21) == 10946
+
 
 class TestBig:
     def test_A(self):

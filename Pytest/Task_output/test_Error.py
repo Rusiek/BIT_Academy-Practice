@@ -1,8 +1,7 @@
-import pytest
 from function import fib_Error
 from math import log10
 
-@pytest.mark.slow
+
 class TestSmall:
     def test_A(self):
         assert fib_Error(0) == 0
@@ -12,7 +11,7 @@ class TestSmall:
     def test_B(self):
         assert fib_Error(10) == 3
         assert fib_Error(11) == 4
-    
+
     def test_C(self):
         assert fib_Error(20) == 3
         assert fib_Error(21) == 4
@@ -22,6 +21,7 @@ class TestSmall:
 
     def test_E(self):
         assert fib_Error(1) == 2
+
 
 class TestBig:
     def test_A(self):

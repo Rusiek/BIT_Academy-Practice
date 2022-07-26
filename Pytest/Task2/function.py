@@ -4,5 +4,4 @@ def is_prime(x):
     for i in range(2, int(x**0.5+1)):
         if not x % i:
             return False
-        
     return True

@@ -6,5 +6,3 @@ def test_square():
     assert square(1) == 1
     assert square(-1) == 1
     assert square(100) == 10000
-
-test_square()

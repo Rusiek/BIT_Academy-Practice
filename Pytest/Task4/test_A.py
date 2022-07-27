@@ -76,6 +76,7 @@ class Test3:
         x = randint(10**4, 10**6)
         assert square(x) == x**2
 
+
 @pytest.mark.skipif
 class Test4:
     def test_A(self):

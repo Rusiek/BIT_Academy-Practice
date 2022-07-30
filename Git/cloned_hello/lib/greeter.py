@@ -1,0 +1,2 @@
+class greeter:
+    pass

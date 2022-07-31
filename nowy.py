@@ -1,1 +1,1 @@
-# jais text do usunieca
+# jais text

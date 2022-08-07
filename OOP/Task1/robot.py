@@ -5,6 +5,7 @@ class robotStatus:
     DEAD  = 1
     CRASH = 2
     WATER = 3
+    
 
 BATTERY_VAL = 10
 class robot:

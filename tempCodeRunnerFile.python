@@ -1,0 +1,25 @@
+class Node:
+    def __init__(self, val):
+        self.val = val
+        self.next = None
+    
+    def __str__(self):
+        return f"{self.val}"
+    
+        
+class LinkedList:
+    def __init__(self):
+        self.Head = None
+    
+    def __iter__(self):
+        n = self.Head
+        while n:
+            yield n
+            n = n.next
+        
+LL = LinkedList()
+a, b = Node(5), Node(10)
+LL.Head = a
+LL.Head.next = b
+for el in LL:
+    print(el, " --> ", end="")

@@ -7,6 +7,16 @@ class Pokemon():
     speed   = "Unkown Speed"
     total   = "Unkown Total"
 
+    def __str__(self):
+        ans = [f"name -------> {self.name}",
+               f"origin -----> {self.origin}",
+               f"hp ---------> {self.hp}",
+               f"attack -----> {self.attack}",
+               f"defense ----> {self.defense}",
+               f"speed ------> {self.speed}",
+               f"total ------> {self.total}"]
+        return "\n".join(ans)
+        
     def Is_same_type(A, B):
         if type(A) == Pokemon or type(B) == Pokemon:
             print("Unknown origin of at least one of pokemons")

@@ -68,8 +68,8 @@ class LampRGB(Lamp):
         
 
 class Device:
-    def __init__(self, name):
-        self.on = False
+    def __init__(self, name, on = False):
+        self.on = on
         self.name = name
 
     def turn_on(self):
@@ -82,7 +82,7 @@ class Device:
 
 
 class Device_AGD(Device):
-    def __init__(self, name, on) -> None:
+    def __init__(self, name, on = False) -> None:
         super().__init__(name, on)
 
     def on_for_time(self, time_on):
@@ -99,7 +99,7 @@ class Device_AGD(Device):
 
 
 class Device_Entertaiment(Device):
-    def __init__(self,name, on, volume = 50, channel = 1) -> None:
+    def __init__(self,name, on = False, volume = 50, channel = 1) -> None:
         super().__init__(name, on )
         self.volume = volume
         self.channel = channel
@@ -207,11 +207,8 @@ class Room:
         self.devices.append(device)       
         return self
 
-    def add_lamp(self, lamp_name, type): 
-        if type == "normal":
-            self.light.append(Lamp(lamp_name))
-        elif type == "RGB":
-            self.light.append(LampRGB(lamp_name))
+    def add_lamp(self, lamp): 
+        self.light.append(lamp)
         return self
     
 
@@ -219,8 +216,9 @@ class SmartHouse:
     def __init__(self):
         self.rooms = []
 
-    def __str__(self):          #WYPISANIE KURDE WSZYSTKIEGO
+    def __str__(self):
         pass
+        return f""
 
     def open(self):
         for room in self.rooms:

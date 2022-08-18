@@ -1,4 +1,4 @@
-from main import SmartHouse, Room, Device_AGD, Device_Entertaiment, Door, Window
+from main import SmartHouse, Room, Device_AGD, Device_Entertaiment, Door, Window, Lamp, LampRGB
 
 myHouse = SmartHouse()
 
@@ -8,13 +8,28 @@ room03 = Room("Bedroom")
 room04 = Room("Bathroom")
 
 # LIGHTS
-room01.add_lamp("01L000", "normal").add_lamp("01L001", "normal").add_lamp("01L002", "normal").add_lamp("01L003", "normal").add_lamp("01L004", "normal").add_lamp("01L005", "normal")
+lamp_01L000 = Lamp("01L000")
+lamp_01L001 = Lamp("01L001")
+lamp_01L002 = Lamp("01L002")
+lamp_01L003 = Lamp("01L003")
+lamp_01L004 = Lamp("01L004")
+lamp_01L005 = Lamp("01L005")
+lamp_02L000 = Lamp("02L000")
+lamp_02L001 = Lamp("02L001")
+lamp_03L000 = Lamp("03L000")
+lamp_03L001 = Lamp("03L001")
+lamp_03L002 = Lamp("03L002")
+lamp_03L003 = Lamp("03L003")
+lamp_03L004 = Lamp("03L004")
+lamp_04L000 = Lamp("04L000")
 
-room02.add_lamp("02L000", "normal").add_lamp("02L001", "normal")
+room01.add_lamp(lamp_01L000).add_lamp(lamp_01L001).add_lamp(lamp_01L002).add_lamp(lamp_01L003).add_lamp(lamp_01L004).add_lamp(lamp_01L005)
 
-room03.add_lamp("03L000", "RGB").add_lamp("03L001", "normal").add_lamp("03L002", "normal").add_lamp("03L003", "normal").add_lamp("03L004", "normal")
+room02.add_lamp(lamp_02L000).add_lamp(lamp_02L001)
 
-room04.add_lamp("04L000", "normal")
+room03.add_lamp(lamp_03L000).add_lamp(lamp_03L001).add_lamp(lamp_03L002).add_lamp(lamp_03L003).add_lamp(lamp_03L004)
+
+room04.add_lamp(lamp_04L000)
 
 # DOORS AND WINDOWS
 door_010D00 = Door("010D00", "out")

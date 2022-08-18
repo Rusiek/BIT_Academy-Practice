@@ -15,3 +15,6 @@ pokemon_A = Pikachu()
 pokemon_B = Charmander()
 
 Pokemon.Fight(pokemon_A, pokemon_B)
+
+print(pokemon_A)
+print(pokemon_B)

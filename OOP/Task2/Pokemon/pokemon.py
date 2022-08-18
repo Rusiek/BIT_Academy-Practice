@@ -27,3 +27,8 @@ class Pokemon():
 
     def Compare_speed(A, B):
         print(f"More Speed:   {A.name if A.speed > B.speed else B.name}")
+
+    def __str__(self) -> str:
+        info = f"name = {self.name} \n origin  = {self.origin} \n hp = {self.hp} \n attack  = {self.attack} \n defense = {self.defense} \n speed   = {self.speed} \n total   = {self.total}"
+        return info
+

@@ -1,7 +1,6 @@
 from main import SmartHouse, Room, Device_AGD, Device_Entertaiment, Door, Window, Lamp, LampRGB
 
 myHouse = SmartHouse()
-
 room01 = Room("Living room and kitchen")
 room02 = Room("Corridor")
 room03 = Room("Bedroom")
@@ -16,14 +15,15 @@ lamp_01L004 = Lamp("01L004")
 lamp_01L005 = Lamp("01L005")
 lamp_02L000 = Lamp("02L000")
 lamp_02L001 = Lamp("02L001")
-lamp_03L000 = Lamp("03L000")
+lamp_03L000 = LampRGB("03L000")
 lamp_03L001 = Lamp("03L001")
 lamp_03L002 = Lamp("03L002")
 lamp_03L003 = Lamp("03L003")
 lamp_03L004 = Lamp("03L004")
 lamp_04L000 = Lamp("04L000")
 
-room01.add_lamp(lamp_01L000).add_lamp(lamp_01L001).add_lamp(lamp_01L002).add_lamp(lamp_01L003).add_lamp(lamp_01L004).add_lamp(lamp_01L005)
+room01.add_lamp(lamp_01L000).add_lamp(lamp_01L001).add_lamp(lamp_01L002).add_lamp(lamp_01L003).add_lamp(
+    lamp_01L004).add_lamp(lamp_01L005)
 
 room02.add_lamp(lamp_02L000).add_lamp(lamp_02L001)
 

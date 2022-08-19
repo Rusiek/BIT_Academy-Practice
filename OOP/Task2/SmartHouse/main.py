@@ -38,7 +38,7 @@ class Lamp:
         else:
             self.intensity = intensity
         return self
-    
+
     def turn_on(self):
         self.on = True
         return self
@@ -49,10 +49,10 @@ class Lamp:
 
 
 class LampRGB(Lamp):
-    def __init__(self, lamp_name, intencity, on):
-        super().__init__(lamp_name, intencity, on)
+    def __init__(self, lamp_name, intencity=0, on=False):
+        super().__init__(lamp_name)
         self.color = (255, 255, 255)
-    
+
     def change_intensity(self, intensity):
         return super().change_intensity(intensity)
 
@@ -62,13 +62,13 @@ class LampRGB(Lamp):
 
     def turn_on(self):
         return super().turn_on()
-    
+
     def turn_off(self):
         return super().turn_off()
-        
+
 
 class Device:
-    def __init__(self, name, on = False):
+    def __init__(self, name, on=False):
         self.on = on
         self.name = name
 
@@ -82,7 +82,7 @@ class Device:
 
 
 class Device_AGD(Device):
-    def __init__(self, name, on = False) -> None:
+    def __init__(self, name, on=False) -> None:
         super().__init__(name, on)
 
     def on_for_time(self, time_on):
@@ -93,17 +93,17 @@ class Device_AGD(Device):
 
     def turn_on(self):
         return super().turn_on()
-    
+
     def turn_off(self):
         return super().turn_off()
 
 
 class Device_Entertaiment(Device):
-    def __init__(self,name, on = False, volume = 50, channel = 1) -> None:
-        super().__init__(name, on )
+    def __init__(self, name, on=False, volume=50, channel=1) -> None:
+        super().__init__(name, on)
         self.volume = volume
         self.channel = channel
-    
+
     def volume_up(self):
         self.volume += 1
         if self.volume >= 100:
@@ -117,7 +117,7 @@ class Device_Entertaiment(Device):
         return self
 
     def change_volume(self, vol):
-        if vol>= 100:
+        if vol >= 100:
             self.volume = 100
         elif vol <= 0:
             self.volume = 0
@@ -143,7 +143,7 @@ class Device_Entertaiment(Device):
 
     def turn_on(self):
         return super().turn_on()
-    
+
     def turn_off(self):
         return super().turn_off()
 
@@ -156,7 +156,41 @@ class Room:
         self.windows = []
         self.devices = []
         self.light = []
-    
+
+    def equipment(self):
+        house = f"{self.name} \n"
+        for lamp in self.light:
+            if lamp.on:
+                status = "on"
+            else:
+                status = "off"
+            house += f"- lamp: {lamp.name}, intensity: {lamp.intensity}, status: {status} \n"
+        for out_door in self.out_doors:
+            if out_door.open:
+                status = "open"
+            else:
+                status = "close"
+            house += f"- exit door: {out_door.name}, status: {status} \n"
+        for door in self.doors:
+            if door.open:
+                status = "open"
+            else:
+                status = "close"
+            house += f"- door: {door.name}, status: {status} \n"
+        for window in self.windows:
+            if window.open:
+                status = "open"
+            else:
+                status = "close"
+            house += f"- window: {window.name}, status: {status} \n"
+        for device in self.devices:
+            if device.on:
+                status = "on"
+            else:
+                status = "off"
+            house += f"- device: {device.name}, status: {status} \n"
+        return house
+
     def close(self):
         for door in self.out_doors:
             door.open = False
@@ -188,7 +222,7 @@ class Room:
         for lamp in self.light:
             lamp.turn_off()
         for window in self.windows:
-            window.open = False 
+            window.open = False
         for door in self.out_doors:
             door.open = False
         for door in self.doors:
@@ -202,23 +236,25 @@ class Room:
     def add_door(self, door):
         self.doors.append(door)
         return self
-    
+
     def add_device(self, device):
-        self.devices.append(device)       
+        self.devices.append(device)
         return self
 
-    def add_lamp(self, lamp): 
+    def add_lamp(self, lamp):
         self.light.append(lamp)
         return self
-    
+
 
 class SmartHouse:
     def __init__(self):
         self.rooms = []
 
     def __str__(self):
-        pass
-        return f""
+        house = ""
+        for room in self.rooms:
+            house += f"{room.equipment()}\n"
+        return house
 
     def open(self):
         for room in self.rooms:
@@ -233,4 +269,3 @@ class SmartHouse:
     def add_room(self, room):
         self.rooms.append(room)
         return self
-     

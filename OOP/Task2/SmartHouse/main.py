@@ -82,7 +82,7 @@ class Device:
 
 
 class Device_AGD(Device):
-    def __init__(self, name, on=False) -> None:
+    def __init__(self, name, on=False):
         super().__init__(name, on)
 
     def on_for_time(self, time_on):
@@ -99,7 +99,7 @@ class Device_AGD(Device):
 
 
 class Device_Entertaiment(Device):
-    def __init__(self, name, on=False, volume=50, channel=1) -> None:
+    def __init__(self, name, on=False, volume=50, channel=1):
         super().__init__(name, on)
         self.volume = volume
         self.channel = channel

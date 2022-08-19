@@ -1,8 +1,8 @@
-from pokemon import Pokemon
 from Electric.electric import *
 from Fire.fire import *
-from Water.water import *
 from Grass.grass import *
+from Water.water import *
+from pokemon import Pokemon
 
 print(Pokemon.origin)
 print(Water.origin)
